@@ -8,7 +8,7 @@ function add(a){
 console.log(add(num1)(num2));
 
 //Infinit Curring
-
+//Infinite Addition
 function infinte(a){
     return function(b){
         if(b){
