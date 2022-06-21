@@ -1,3 +1,4 @@
+//Create Pattern
 export function pattern(n){
     let div = document.getElementById("root");
     let middle = Math.round((n-1)/2);
