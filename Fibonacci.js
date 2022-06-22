@@ -1,4 +1,4 @@
-//Finding Phibonacci For given Number
+
 const fibo = (n)=>{
     let i=0,j=1;
     let arr = [i,j]
