@@ -6,9 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index Page</title>
   </head>
+  <style>
+    .skeleton {
+      /* border: 2px solid black; */
+      height: 100px;
+      width: 300px;
+      margin: auto;
+    }
+    .skeleton-text {
+      /* border: 1px solid black; */
+      margin: 10px;
+      height: 20px;
+      border-radius: 10px;
+    }
+    .animation-class {
+      animation: skeleton-animation 1s linear infinite alternate;
+    }
+
+    @keyframes skeleton-animation {
+      0% {
+        background-color: hsl(200, 20%, 80%);
+      }
+      100% {
+        background-color: hsl(200, 20%, 95%);
+      }
+    }
+  </style>
   <body>
-    Hello, World
-    <div id="root"></div>
+    <div id="root">
+      <div class="skeleton">
+        <div class="skeleton-text animation-class"></div>
+        <div class="skeleton-text animation-class"></div>
+      </div>
+    </div>
   </body>
   <!-- <script src="./Promise.js"></script> -->
   <!-- <script src="./Generators.js"></script> -->
@@ -17,4 +47,13 @@
   <!-- <script type="module" src="Fibonacci.js"></script> -->
   <!-- <script type="module" src="Pattern.js"></script> -->
   <script src="Person.js"></script>
+  <script>
+    let text = document.getElementsByClassName("skeleton-text");
+    setTimeout(() => {
+      for (let i = 0; i < text.length; ++i) {
+        text[i].classList.remove("animation-class");
+        text[i].innerHTML += "Replaced Text";
+      }
+    }, 5000);
+  </script>
 </html>
