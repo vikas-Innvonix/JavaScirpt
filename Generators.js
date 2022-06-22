@@ -1,3 +1,4 @@
+//Generators
 function* generators(){
     yield 1;
     let doubleNumber = yield 2;
